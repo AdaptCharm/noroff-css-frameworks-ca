@@ -1,0 +1,25 @@
+:root {
+  --background: #fff;
+  --foreground: #0a0a0a;
+
+  --primary: #e92569;
+
+  --accents-1: #efefef;
+  --accents-2: #e5e5e5;
+  --accents-3: #c7c7c7;
+  --accents-4: #767676;
+
+  --text-primary: var(--primary);
+  --text-secondary: var(--accents-4);
+
+  --font-playfair: 'Playfair Display', serif;
+  --font-lato: 'Lato', sans-serif;
+
+  --gradient: radial-gradient(var(--background), var(--accents-2));
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
