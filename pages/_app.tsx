@@ -1,4 +1,5 @@
 import '@assets/main.css'
+import '@assets/tabs.css'
 
 import { FC, useEffect } from 'react'
 import type { AppProps } from 'next/app'
