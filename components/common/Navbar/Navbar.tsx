@@ -69,7 +69,7 @@ const _Navbar: FC = () => {
                 <input
                   id='search'
                   name='search'
-                  className='block w-[202px] bg-white rounded-tl rounded-bl py-2 pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-4 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm'
+                  className='block w-[202px] bg-white rounded-tl rounded-bl py-2 pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-5 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm'
                   placeholder='Search'
                   type='search'
                 />
