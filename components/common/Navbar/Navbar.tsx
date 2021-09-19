@@ -48,9 +48,20 @@ const pages = [
 const _Navbar: FC = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
 
+  Router.events.on('routeChangeStart', () => {
+    setMobileMenu(false)
+  })
+
   return (
-    <div className='absolute md:relative z-10 w-full md:w-auto bg-accents-1 shadow-4 md:shadow-none'>
-      <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] py-[21px]'>
+    <div
+      className={cn(
+        'relative z-10 w-full md:w-auto bg-accents-1 md:shadow-none',
+        {
+          'shadow-4': mobileMenu,
+        }
+      )}
+    >
+      <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] py-[14.5px] md:py-[17px]'>
         <div className='flex justify-between'>
           <div className='flex'>
             <div className='flex-shrink-0 flex items-center'>
@@ -74,8 +85,7 @@ const _Navbar: FC = () => {
               <div className='flex'>
                 <input
                   id='search'
-                  name='search'
-                  className='border-transparent w-[202px] bg-white rounded-tl rounded-bl py-2 pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-5 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-0 focus:ring-primary focus:border-primary'
+                  className='border-transparent w-[202px] bg-white rounded-tl rounded-bl py-[5px] pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-5 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-0 focus:ring-primary focus:border-primary'
                   placeholder='Search'
                   type='search'
                 />
