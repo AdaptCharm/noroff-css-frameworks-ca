@@ -32,11 +32,12 @@ module.exports = {
         DEFAULT: '0 3px 6px rgb(0, 0, 0)',
         1: '0 16px 21px rgba(0, 0, 0, 0.06)',
         2: '0 6px 10px rgba(0, 0, 0, 0.05)',
+        3: '0 6px 6px rgba(0, 0, 0, 0.04)',
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
