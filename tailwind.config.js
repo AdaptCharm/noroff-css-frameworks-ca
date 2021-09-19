@@ -21,6 +21,9 @@ module.exports = {
         sans: 'var(--font-lato)',
         playfair: 'var(--font-playfair)',
       },
+      fontSize: {
+        '4xl': '2.125rem',
+      },
       spacing: {
         18: '4.375rem',
         19: '4.6875rem',
@@ -28,6 +31,7 @@ module.exports = {
       boxShadow: {
         DEFAULT: '0 3px 6px rgb(0, 0, 0)',
         1: '0 16px 21px rgba(0, 0, 0, 0.06)',
+        2: '0 6px 10px rgba(0, 0, 0, 0.05)',
       },
     },
   },
