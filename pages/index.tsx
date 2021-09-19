@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Carousel } from '@components/ui'
 import { Facebook, Twitter } from '@components/icons'
 
 import { Tab, TabList, TabPanel, TabsProps } from 'react-tabs'
@@ -49,22 +50,7 @@ const tabs = {
 const Home = () => {
   return (
     <>
-      <div className='relative flex-shrink-0 w-full h-[462px]'>
-        <Image
-          src='/carousel/carousel-1.jpg'
-          alt='Carousel 1'
-          layout='fill'
-          objectFit='cover'
-        />
-        <div className='absolute inset-x-0 bottom-8 md:bottom-[31px] flex justify-center space-x-4 z-50'>
-          {[...Array(3)].map((e, i) => (
-            <div
-              className='w-[30px] h-[30px] bg-primary odd:bg-white rounded-sm shadow'
-              key={i}
-            />
-          ))}
-        </div>
-      </div>
+      <Carousel />
       <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem]'>
         <div className='py-9'>
           <h1 className='font-playfair text-primary text-[2.125rem] leading-[2.875rem]'>
