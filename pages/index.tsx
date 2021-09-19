@@ -66,7 +66,7 @@ const Home = () => {
         </div>
       </div>
       <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem]'>
-        <div className=' py-9'>
+        <div className='py-9'>
           <h1 className='font-playfair text-primary text-[2.125rem] leading-[2.875rem]'>
             We do YAY things
           </h1>
