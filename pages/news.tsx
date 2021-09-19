@@ -80,42 +80,44 @@ const articles = [
 
 const _News = () => {
   return (
-    <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] pt-9 md:pt-10 pb-32'>
-      <h1 className='font-playfair text-4xl text-primary'>News</h1>
+    <div className='relative'>
+      <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] pt-9 md:pt-10 pb-32'>
+        <h1 className='font-playfair text-4xl text-primary'>News</h1>
 
-      <div className='mt-10'>
-        <Pagination />
-      </div>
+        <div className='mt-10'>
+          <Pagination />
+        </div>
 
-      <div className='mt-10'>
-        <div className='grid sm:grid-cols-2 xl:grid-cols-4 gap-6'>
-          {articles.map((a, i) => (
-            <div className='flex flex-col shadow-2' key={i}>
-              <div className='relative flex-shrink-0 w-full h-[190px]'>
-                <Image
-                  className='rounded-t-[10px]'
-                  src={a.image.url}
-                  alt={a.image.alt}
-                  layout='fill'
-                  objectFit='cover'
-                />
-              </div>
-              <div className='flex flex-col rounded-b-[10px] bg-white p-5'>
-                <p className='text-xl'>{a.title}</p>
-                <p className='mt-3 text-lg text-secondary'>{a.description}</p>
-                <div className='mt-3'>
-                  <button className='inline-flex items-center justify-center w-full h-[46px] bg-primary text-white uppercase rounded border-r-[32px] border-accents-5'>
-                    More
-                  </button>
+        <div className='mt-10'>
+          <div className='grid sm:grid-cols-2 xl:grid-cols-4 gap-6'>
+            {articles.map((a, i) => (
+              <div className='flex flex-col shadow-2' key={i}>
+                <div className='relative flex-shrink-0 w-full h-[190px]'>
+                  <Image
+                    className='rounded-t-[10px]'
+                    src={a.image.url}
+                    alt={a.image.alt}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </div>
+                <div className='flex flex-col rounded-b-[10px] bg-white p-5'>
+                  <p className='text-xl'>{a.title}</p>
+                  <p className='mt-3 text-lg text-secondary'>{a.description}</p>
+                  <div className='mt-6'>
+                    <button className='inline-flex items-center justify-center w-full h-[46px] bg-primary text-white uppercase rounded border-r-[32px] border-accents-5'>
+                      More
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className='mt-14'>
-        <Pagination />
+        <div className='mt-14'>
+          <Pagination />
+        </div>
       </div>
     </div>
   )
