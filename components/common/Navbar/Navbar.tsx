@@ -1,7 +1,8 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Router, useRouter } from 'next/router'
 import Link from 'next/link'
 import cn from 'classnames'
+import { Hamburger } from '@components/icons'
 
 interface Props {
   href: string
@@ -15,10 +16,13 @@ const ActiveLink: FC<Props> = ({ href, children }) => {
   return (
     <Link href={href}>
       <a
-        className={cn('inline-flex items-center px-4 text-foreground', {
-          'bg-white rounded-[0.1875rem]':
-            pathname.split('/')[1] === href.split('/')[1],
-        })}
+        className={cn(
+          'inline-flex items-center h-[50px] md:h-[26px] pl-[51px] pr-[50px] md:px-4 text-foreground',
+          {
+            'bg-white rounded-[0.1875rem]':
+              pathname.split('/')[1] === href.split('/')[1],
+          }
+        )}
       >
         {children}
       </a>
@@ -42,8 +46,10 @@ const pages = [
 ]
 
 const _Navbar: FC = () => {
+  const [mobileMenu, setMobileMenu] = useState(false)
+
   return (
-    <div className='relative bg-accents-1'>
+    <div className='absolute md:relative z-10 w-full md:w-auto bg-accents-1 shadow-4 md:shadow-none'>
       <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] py-[21px]'>
         <div className='flex justify-between'>
           <div className='flex'>
@@ -52,7 +58,7 @@ const _Navbar: FC = () => {
                 The YAY Company
               </span>
             </div>
-            <div className='hidden md:flex sm:ml-[43px] sm:space-x-0.5'>
+            <div className='hidden md:flex md:items-center sm:ml-[43px] sm:space-x-0.5'>
               {pages.map((page) => (
                 <ActiveLink href={page.href} key={page.name}>
                   {page.name}
@@ -78,6 +84,48 @@ const _Navbar: FC = () => {
                 </button>
               </div>
             </div>
+          </div>
+          <div className='-mr-2 flex md:hidden'>
+            <button
+              className='inline-flex items-center justify-center p-2 rounded-md text-accents-5 hover:bg-white focus:outline-none focus:ring-1 focus:ring-inset focus:ring-primary border hover:border-primary'
+              onClick={() => {
+                setMobileMenu(!mobileMenu)
+              }}
+            >
+              <span className='sr-only'>Open main menu</span>
+              <Hamburger />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className={cn('relative md:hidden pb-[43px]', {
+          block: mobileMenu,
+          hidden: !mobileMenu,
+        })}
+      >
+        <div className='flex flex-col'>
+          {pages.map((page) => (
+            <ActiveLink href={page.href} key={page.name}>
+              {page.name}
+            </ActiveLink>
+          ))}
+        </div>
+        <div className='mt-12 w-full'>
+          <label htmlFor='search' className='sr-only'>
+            Search
+          </label>
+          <div className='flex pl-[31px] pr-[30px]'>
+            <input
+              id='search'
+              name='search'
+              className='border-transparent w-full bg-white rounded-tl rounded-bl py-2 pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-5 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-0 focus:ring-primary focus:border-primary'
+              placeholder='Search'
+              type='search'
+            />
+            <button className='ml-[0.0625rem] mt-0.5 bg-primary text-white rounded-tr rounded-br min-w-[43px] px-2 ring-1 ring-primary'>
+              Go
+            </button>
           </div>
         </div>
       </div>
