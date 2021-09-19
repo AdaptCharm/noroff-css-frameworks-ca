@@ -80,7 +80,7 @@ const articles = [
 
 const _News = () => {
   return (
-    <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] pt-8 pb-32'>
+    <div className='max-w-7xl mx-auto pl-[1.9375rem] pr-[1.875rem] xl:pl-[4.6875rem] xl:pr-[4.0625rem] pt-9 md:pt-10 pb-32'>
       <h1 className='font-playfair text-4xl text-primary'>News</h1>
 
       <div className='mt-10'>
