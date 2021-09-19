@@ -87,7 +87,7 @@ const _Navbar: FC = () => {
           </div>
           <div className='-mr-2 flex md:hidden'>
             <button
-              className='inline-flex items-center justify-center p-2 rounded-md text-accents-5 hover:bg-white focus:outline-none focus:ring-1 focus:ring-inset focus:ring-primary border hover:border-primary'
+              className='inline-flex items-center justify-center p-2 rounded-md text-accents-5 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-primary border border-transparent hover:border-primary'
               onClick={() => {
                 setMobileMenu(!mobileMenu)
               }}
