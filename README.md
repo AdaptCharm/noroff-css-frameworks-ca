@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CSS Frameworks Course Assignment
 
-## Getting Started
+## Brief
 
-First, run the development server:
+From the supplied design, use Bootstrap or React Bootstrap to create a responsive website.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Level 1 Process
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- You may use React or regular HTML, JavaScript and Sass.
+- You may use Bootstrap or React Bootstrap.
+- Use one of Sass, CSS Modules or Styled Components to style the project.
+- You can use Font Awesome or another icon library for the icons.
+- The fonts in the design are Google fonts.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Level 2 Process
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- If you use Sass, use BEM to create your class names.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Resources
 
-## Learn More
+The design and additional files can be found in this repo.
 
-To learn more about Next.js, take a look at the following resources:
+## Marking Criteria
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The site should match the design as closely as possible and should be responsive across all device sizes.
+- If your project uses Sass, the files should be appropriately named and arranged in partials.
+- If your project uses React, your components should be appropriately named and arranged.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Submission
 
-## Deploy on Vercel
+- When you accepted this submission, a repository was created for you. Use this repository for your code and submit a link to this repo when you deliver.
+- Remember to EXCLUDE the node_modules folder if you use React or any npm packages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Time
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+40 hours
